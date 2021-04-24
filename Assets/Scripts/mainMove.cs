@@ -12,7 +12,8 @@ public class mainMove : MonoBehaviour
     public float jumpHeight = 1.0f;
     public float gravityValue = -9.81f;
     private Vector3 move;
-
+    public Animator animator;
+    
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -39,6 +40,9 @@ public class mainMove : MonoBehaviour
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
+        float speed = Mathf.Sqrt(controller.velocity.sqrMagnitude)/10f;
+        // add poses in animator for still idling
         controller.Move(playerVelocity * Time.deltaTime);
+        animator.SetFloat("speed",speed); 
     }
 }
