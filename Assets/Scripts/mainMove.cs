@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class mainMove : MonoBehaviour
 {
+    public ScoreCounter sc;
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -44,5 +45,14 @@ public class mainMove : MonoBehaviour
         // add poses in animator for still idling
         controller.Move(playerVelocity * Time.deltaTime);
         animator.SetFloat("speed",speed); 
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        Debug.Log(other.collider.tag);
+        if(other.collider.gameObject.CompareTag("point")){
+            sc.Score += 1;
+            Debug.Log("POINT YEET");
+            Debug.Log(sc.Score);
+        }
     }
 }

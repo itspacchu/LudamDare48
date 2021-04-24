@@ -22,11 +22,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _DistanceDetail: 1
-    - _Height: 1.04
-    - _RandomHeight: 1.35
-    - _RandomWidth: 0.92
-    - _TessellationUniform: 8.52
-    - _Width: 0.07
+    - _Height: 1.58
+    - _RandomHeight: 2.03
+    - _RandomWidth: 0.82
+    - _TessellationUniform: 7.45
+    - _Width: 0.38
     - _WindStrength: 0.05
     m_Colors:
     - _Color: {r: 0.3921569, g: 0.57254905, b: 0.4156863, a: 1}

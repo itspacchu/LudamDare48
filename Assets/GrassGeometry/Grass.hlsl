@@ -122,12 +122,12 @@ void geom(uint primitiveID : SV_PrimitiveID, triangle Varyings input[3], inout T
 	// -----------------------
 	// (blades closer to camera have more detail, should only really be used for first person camera)
 
-	float3 cameraPos = _WorldSpaceCameraPos;
+	float3 cameraPos = _WorldSpaceCameraPos - float3(0,0,1.5);
 	float3 positionWS = input[1].positionWS;
 	
 	#ifdef DISTANCE_DETAIL
 		float3 vtcam = cameraPos - positionWS;
-		float distSqr = 0.3*dot(vtcam, vtcam);
+		float distSqr = 0.05*dot(vtcam, vtcam);
 		int bladeSegments = lerp(BLADE_SEGMENTS, 0, saturate(distSqr * 0.005 - 0.1));
 	#else
 		int bladeSegments = BLADE_SEGMENTS;
