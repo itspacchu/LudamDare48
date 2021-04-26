@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TorchRunner WebGL</title>
+  </head>
+  <body style="text-align: center;background-color: #231F20;">
+    <canvas id="unity-canvas" width=1280 height=720 style="width: 1280px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/WebGLBuildTest.loader.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/WebGLBuildTest.data.gz",
+        frameworkUrl: "Build/WebGLBuildTest.framework.js.gz",
+        codeUrl: "Build/WebGLBuildTest.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "itsPacchu",
+        productName: "TorchRunner WebGL",
+        productVersion: "1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+    <br>
+    <br>
+    <iframe
+      src="https://itch.io/embed/1011037?border_width=5&amp;bg_color=1a3135&amp;fg_color=c6dcdc&amp;link_color=ffffff&amp;border_color=1a3135"
+      width="560" height="175" frameborder="0"><a href="https://pacchu.itch.io/torch-runner">Torch Runner by
+        Pacchu</a></iframe>
+  </body>
+</html>
