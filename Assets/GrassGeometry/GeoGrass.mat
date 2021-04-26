@@ -22,7 +22,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DistanceDetail: 1
-    - _Height: 1.58
+    - _Height: 0.77
     - _RandomHeight: 2.03
     - _RandomWidth: 0.82
     - _TessellationUniform: 7.45

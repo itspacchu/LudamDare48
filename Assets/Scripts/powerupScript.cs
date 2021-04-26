@@ -5,7 +5,8 @@ using UnityEngine;
 public class powerupScript : MonoBehaviour
 {
 
-    private void OnCollisionEnter(Collision other) {
-        Destroy(this.gameObject);
+    private void OnTriggerEnter(Collider other) {
+        Destroy(this.gameObject,0.1f);
     }
+    
 }

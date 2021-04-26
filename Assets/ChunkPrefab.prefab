@@ -114,4 +114,10 @@ MonoBehaviour:
   - {fileID: 6322610917800337267, guid: 7b2869e47d3ba1743a16899cf469c3ea, type: 3}
   - {fileID: 823016859832883691, guid: 1e8f12aba0571704dae9ee043af512ff, type: 3}
   - {fileID: 8273101218581472555, guid: 4d084208c0571c54a8a15952da769788, type: 3}
-  no_of_trees: 2
+  rocks:
+  - {fileID: 2954760986351327841, guid: 98b74773e10a78b4b9b354b8891b68fe, type: 3}
+  - {fileID: 2855712828851758168, guid: fb89b697f4753134aa92e8ef3ff87c96, type: 3}
+  - {fileID: 2855712828851758168, guid: fb89b697f4753134aa92e8ef3ff87c96, type: 3}
+  - {fileID: 518721918552246870, guid: 44a9c34a6b3602b4182941e0f05e6967, type: 3}
+  no_of_trees: 3
+  Pellet: {fileID: 5583262505224161273, guid: a1d1d8eace02f9342bf96ce18b53f581, type: 3}

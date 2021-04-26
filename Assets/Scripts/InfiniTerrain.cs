@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class InfiniTerrain : MonoBehaviour
 {
-    public static float maxViewDst = 50;
+    public float maxViewDistance = 50;
+    public static float maxViewDst;
     public Transform viewer;
     public static Vector2 viewerPosition;
     public int chunksize;
@@ -15,6 +16,7 @@ public class InfiniTerrain : MonoBehaviour
     Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
     void Start()
     {
+        maxViewDst = maxViewDistance;
         Treefab = ToInstaniate;             
         chunkVisibleInViewDst = Mathf.RoundToInt(maxViewDst/chunksize);
     }
@@ -29,7 +31,7 @@ public class InfiniTerrain : MonoBehaviour
     {
         int currentChunkCoordX = Mathf.RoundToInt(viewerPosition.x/chunksize);
         int currentChunkCoordY = Mathf.RoundToInt(viewerPosition.y / chunksize);
-
+        
         for(int yOffset = -chunkVisibleInViewDst; yOffset <= chunkVisibleInViewDst ; yOffset++){
             for (int xOffset = -chunkVisibleInViewDst; xOffset <= chunkVisibleInViewDst; xOffset++)
             {

@@ -74,7 +74,7 @@ Shader "Unlit/GeoGrass" {
 					float4 shadowCoord = TransformWorldToShadowCoord(input.positionWS);
 				#endif
 
-				float3 ambient = SampleSH(input.normalWS) + float3(0.01,0.04,0.04);
+				float3 ambient = SampleSH(input.normalWS);
 				
 				Light mainLight = GetMainLight(shadowCoord);
 				float NdotL = saturate(saturate(dot(input.normalWS, mainLight.direction)) + 0.8);
