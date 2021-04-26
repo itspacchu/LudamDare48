@@ -120,4 +120,5 @@ MonoBehaviour:
   - {fileID: 2855712828851758168, guid: fb89b697f4753134aa92e8ef3ff87c96, type: 3}
   - {fileID: 518721918552246870, guid: 44a9c34a6b3602b4182941e0f05e6967, type: 3}
   no_of_trees: 3
+  no_of_rocks: 4
   Pellet: {fileID: 5583262505224161273, guid: a1d1d8eace02f9342bf96ce18b53f581, type: 3}

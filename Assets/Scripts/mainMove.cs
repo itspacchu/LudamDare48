@@ -57,18 +57,18 @@ public class mainMove : MonoBehaviour
         Cursor.lockState = lockCursor ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = !lockCursor;
 
-        groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
         }
+        playerVelocity.y += gravityValue * Time.deltaTime; // oof Gravity should be here
         float rot = Input.GetAxis("Horizontal")*Time.deltaTime*rotationSpeed;
         this.transform.Rotate(new Vector3(0,rot,0));
-        controller.Move(this.transform.forward * Time.deltaTime * playerSpeed);
+        controller.Move(playerVelocity + this.transform.forward * Time.deltaTime * playerSpeed);
 
 
 
-        playerVelocity.y += gravityValue * Time.deltaTime;
+        
         float speed = Mathf.Sqrt(controller.velocity.sqrMagnitude)/10f;
         // add poses in animator for still idling
         if(!isDead){
